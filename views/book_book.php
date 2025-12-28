@@ -1,16 +1,5 @@
 <?php 
-
-    $uri = $_SERVER['REQUEST_URI'];
-    $id = explode("/", $uri);
-
-    $listaDeLivros = json_decode(file_get_contents('../livros.json'), true); 
-
-    $livro = array_filter($listaDeLivros, fn($livro) => $livro['id'] == (int) $id[3]);
-    $livro = array_values($livro)[0];
-
-    include './sidebar.php';
-    include './templates/app.php';
-
+    require_once __DIR__ . '/../controller/book.controller.php';
 ?>
 
 <div class="container d-flex justify-content-center mt-5">

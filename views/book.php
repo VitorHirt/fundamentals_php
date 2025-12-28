@@ -1,5 +1,5 @@
-<?php
-    $listaDeLivros = json_decode(file_get_contents('livros.json'), true); 
+<?php 
+   $views = "book_book";
 ?>
 
 <section class="d-flex justify-content-center gap-2 mt-5 flex-wrap">
@@ -9,7 +9,7 @@
             <div class="card-body">
                 <h5 class="card-title"><i class="bi bi-journals"></i> <?php echo $livros['nome'] ?></h5>
                 <p class="card-text"><?php echo $livros['descricao'] ?></p>
-                <a href="/views/book_book.php/<?php echo $livros['id'] ?>" class="btn w-100 fw-bold d-flex justify-content-between align-items-center bg-info-subtle">
+                <a href="/views/<?php echo $views ?>.php/<?php echo $livros['id'] ?>" class="btn w-100 fw-bold d-flex justify-content-between align-items-center bg-info-subtle">
                     <span>Ver mais</span>
                     <i class="bi fs-4 bi-arrow-right-short"></i>
                 </a>

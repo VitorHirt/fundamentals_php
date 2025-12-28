@@ -11,8 +11,9 @@
     <title>Sistema de Livros</title>
   </head>
   <body class="bg-body-secondary">
+    <?php require_once __DIR__ . "/sidebar.php" ?>
     <main class="container">
-        <?php include "views/book.php" ?>
+        <?php include "views/{$views}.php" ?>
     </main>
   </body>
 </html>

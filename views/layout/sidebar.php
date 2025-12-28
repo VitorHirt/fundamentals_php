@@ -16,7 +16,7 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="/livros.php"><i class="bi bi-journal-bookmark-fill"></i> Livros</a>
+          <a class="nav-link" href="/book.php"><i class="bi bi-journal-bookmark-fill"></i> Livros</a>
         </li>
       </ul>
     </div>

@@ -1,6 +1,9 @@
 <?php 
 
-include 'views/sidebar.php';
-include 'views/templates/app.php'; 
+    $controller = 'index';
+    require_once 'helpers/dump.php';
+    require_once 'route/web.php';
 
+
+    router($controller);
 ?>
