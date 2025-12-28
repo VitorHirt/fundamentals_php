@@ -3,7 +3,7 @@
     $views = 'book_book';
 ?>
 
-<section class="d-flex justify-content-center gap-2 mt-5 flex-wrap">
+<section class="d-flex justify-content-center gap-2 flex-wrap">
     <?php foreach ($listaDeLivros as $livros): ?>
         <div class="card" style="width: 18rem;">
             <img src="<?php echo $livros['url'] ?>" class="card-img-top" alt="...">

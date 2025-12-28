@@ -6,7 +6,7 @@
     $id = explode("/", $uri);
     $livro = array_filter($listaDeLivros, fn($livro) => $livro['id'] == (int) $id[3]);
     $livro = array_values($livro)[0];
-    $views = 'book_book';
+    $views = 'book';
     
     require_once __DIR__ . '/../helpers/dump.php';
     require_once __DIR__ . '/../views/layout/layout.php';    

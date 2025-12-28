@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-dark-subtle">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/index.php">
+    <a class="navbar-brand" href="/views/<?php echo $views ?>.php">
       <img src="/images/book.svg" width="50" height="50" alt="Imagem de um livro"> 
       <span>Saraiva</span>
     </a>
@@ -12,11 +12,11 @@
     <div class="collapse navbar-collapse ms-5" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/index.php"><i class="bi bi-house"></i> Home</a>
+          <a class="nav-link active" aria-current="page" href="/views/<?php echo $views ?>.php"><i class="bi bi-house"></i> Home</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="/book.php"><i class="bi bi-journal-bookmark-fill"></i> Livros</a>
+          <a class="nav-link" href="/views/<?php echo $views ?>.php"><i class="bi bi-journal-bookmark-fill"></i> Livros</a>
         </li>
       </ul>
     </div>

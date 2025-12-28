@@ -1,14 +1,9 @@
 <?php
     $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-    $uri = trim($uri, '/');
-
     $uri = str_replace('.php', '', $uri);
+    $uri = explode('/', $uri);
 
-    if ($uri !== '' && file_exists(__DIR__ . '/' . $uri)) {
-        return false;
-    }
-
-    switch ($uri) {
+    switch ($uri[2]) {
         case 'index':
             require __DIR__ . '/../controller/index.controller.php';
             break;
@@ -17,5 +12,5 @@
             break;
         default:
             http_response_code(404);
-            echo 'Página não encontrada';
+            require_once __DIR__ . '/../views/404.php';
     }

@@ -2,7 +2,7 @@
     require_once __DIR__ . '/../controller/book.controller.php';
 ?>
 
-<div class="container d-flex justify-content-center mt-5">
+<div class="container d-flex justify-content-center mt-3">
     <div class="card" style="width: 50rem;">
         <img src="<?php echo $livro['url'] ?>" class="card-img-top" alt="...">
         <div class="card-body">

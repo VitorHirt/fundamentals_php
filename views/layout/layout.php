@@ -1,3 +1,10 @@
+
+<?php 
+    $uri = $_SERVER["REQUEST_URI"];
+    $uri = str_replace(".php","", $uri);
+    $uri = explode("/", $uri);
+    $uri = $uri[2];
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -13,6 +20,7 @@
   <body class="bg-body-secondary">
     <?php require_once __DIR__ . "/sidebar.php" ?>
     <main class="container">
+        <?php $uri != 'book_book' ? require_once __DIR__ . "/toolbar.php" : '' ?>
         <?php include "views/{$views}.php" ?>
     </main>
   </body>
