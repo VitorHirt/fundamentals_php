@@ -1,6 +1,6 @@
 <?php 
+    $_SERVER["REQUEST_URI"] = '/views/book.php';
 
-    $controller = 'index';
     require_once 'helpers/dump.php';
     require_once 'route/web.php';
     
