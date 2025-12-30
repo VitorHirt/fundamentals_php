@@ -1,10 +1,21 @@
 <?php
     $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
     $uri = str_replace('.php', '', $uri);
     $uri = explode('/', $uri);
+   
+    $is_controller = array_find($uri, function (string $value) {
+        return str_starts_with($value, 'controller');
+    });
+
+    if ($is_controller) {
+        $uri = $_SERVER["REQUEST_URI"] = '/views/home.php';
+        $uri = str_replace('.php', '', $uri);
+        $uri = explode('/', $uri);
+    }
 
     switch ($uri[2]) {
-        case 'index':
+        case 'home':
             require __DIR__ . '/../controller/index.controller.php';
             break;
         case 'book':

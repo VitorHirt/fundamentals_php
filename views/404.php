@@ -1,7 +1,5 @@
 <?php
-
     $views = 'book';
-
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +47,6 @@
     </style>
 </head>
 <body class="d-flex align-items-center justify-content-center text-center">
-
     <div class="error-box">
         <div class="mb-4">
             <i class="bi bi-exclamation-triangle-fill display-1"></i>
@@ -67,6 +64,5 @@
             <i class="bi bi-house-door-fill me-2"></i> Voltar para o início
         </a>
     </div>
-
 </body>
 </html>

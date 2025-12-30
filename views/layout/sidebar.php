@@ -14,10 +14,6 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/views/<?php echo $views ?>.php"><i class="bi bi-house"></i> Home</a>
         </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="/views/<?php echo $views ?>.php"><i class="bi bi-journal-bookmark-fill"></i> Livros</a>
-        </li>
       </ul>
     </div>
   </div>
