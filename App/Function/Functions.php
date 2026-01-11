@@ -64,4 +64,19 @@ class Functions
     {
         return BASE_PATH . "Resources/Views/404/NotFound.php";
     }
+
+    public function findByAuthor(string $author): array
+    {
+        $db = new PDO('sqlite:' . __DIR__ . '/database.sqlite');
+
+        $stmt = $db->prepare(
+            "SELECT * FROM books WHERE author LIKE :author"
+        );
+
+        $stmt->execute([
+            ':author' => "%$author%"
+        ]);
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

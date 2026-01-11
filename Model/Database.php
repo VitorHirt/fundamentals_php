@@ -8,8 +8,8 @@ class Database
 {
     public function db()
     {
-        $db = new PDO('sqlite:database.sqlite');
-        $query = $db->query('SELECT * FROM users');
+        $database = new PDO('sqlite:' . __DIR__ . '/database.sqlite');
+        $query = $database->query('SELECT * FROM book');
         return $query->fetchAll();
     }
 }

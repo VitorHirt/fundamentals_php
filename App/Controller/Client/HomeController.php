@@ -7,13 +7,20 @@ use Model\Database;
 
 class HomeController
 {
+    private $functions;
+    private $database;
+
+    public function __construct(Functions $functions, Database $db)
+    {
+        $this->functions = $functions;
+        $this->database = $db;
+    }
+
     public function index()
     {
-        $helpers = new Functions();
-        $db = new Database();
-        $data['db'] = $db->db();
+        $data['db'] = $this->database->db();
         extract($data);
 
-        return include $helpers->view("client.layout.layout");
+        return include $this->functions->view("client.layout.layout");
     }
 }
