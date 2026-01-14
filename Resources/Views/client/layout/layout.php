@@ -1,13 +1,8 @@
 <?php
 
 $helpers = new Functions();
-$header = $helpers->include("client.layout.partial.header");
-$title = $helpers->title('Bookwise');
-$content = $helpers->include("client.index");
-
-if($bookView){  
-    $content = $helpers->include("client.book");
-}
+$header = $helpers->view("client.layout.partial.header");
+$content = $helpers->view("client.index");
 
 ?>
 
@@ -17,7 +12,7 @@ if($bookView){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $title ?></title>
+    <title>Bookwise</title>
     <link rel="stylesheet" href='<?php echo $helpers->asset('', 'img') ?>'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src='<?php echo $helpers->asset('js', 'js') ?>' defer></script>
